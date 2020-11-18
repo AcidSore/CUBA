@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+    <view entity="purchase_Client" name="client-view" extends="_minimal">
+        <property name="clientId"/>
+        <property name="secondName"/>
+        <property name="registrationDate"/>
+        <property name="phoneNumber"/>
+        <property name="email"/>
+        <property name="cardId" view="_minimal">
+            <property name="clientId" view="_minimal"/>
+            <property name="cardId"/>
+            <property name="discount"/>
+            <property name="totalCost"/>
+        </property>
+    </view>
+</views>
